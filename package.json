@@ -1,8 +1,9 @@
 {
   "name": "underscore.loop",
   "version": "0.0.1",
-  "description": "Provides a clojure/scheme-like interface for recursive looping",
-  "homepage": "",
+  "description": "Scheme/Clojure style recursive looping and tail-call optimization with Underscore.js",
+  "homepage": "https://github.com/benekastah/underscore.loop",
+  "author": "Paul Harper <benekastah@gmail.com>"
   "contributors": [],
   "keywords": [
     "underscore",
@@ -11,7 +12,7 @@
     "scheme",
     "lisp"
   ],
-  "main": "./lib",
+  "main": "./dist/underscore.loop.min",
   "directories": {
     "lib": "./lib"
   },
@@ -23,10 +24,10 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@github.com:benekastah/underscore.loop.git"
   },
   "bugs": {
-    "url": "/issues"
+    "url": "https://github.com/benekastah/underscore.loop/issues"
   },
   "licenses" : [
     { "type" : "MIT" }
