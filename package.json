@@ -1,0 +1,34 @@
+{
+  "name": "underscore.loop",
+  "version": "0.0.1",
+  "description": "Provides a clojure/scheme-like interface for recursive looping",
+  "homepage": "",
+  "contributors": [],
+  "keywords": [
+    "underscore",
+    "loop",
+    "clojure",
+    "scheme",
+    "lisp"
+  ],
+  "main": "./lib",
+  "directories": {
+    "lib": "./lib"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {
+    "underscore": ">= 1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": "/issues"
+  },
+  "licenses" : [
+    { "type" : "MIT" }
+  ]
+}
