@@ -25,7 +25,9 @@ _.mixin
       when 2 then [fn, args, scope] = [args, scope, {}]
       when 1 then [fn, args, scope] = [scope, [], {}]
     scope.loop = _( _.recurse ).bind null, _(fn).bind scope 
-    scope.loop args...
+    ret = scope.loop args...
+    delete scope.loop
+    ret
     
   recurse: do ->
     r = (fn, args...) ->

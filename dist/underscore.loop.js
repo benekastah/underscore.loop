@@ -32,7 +32,7 @@
   };
   _.mixin({
     loop: function(scope, args, fn) {
-      var _ref, _ref2;
+      var ret, _ref, _ref2;
       switch (arguments.length) {
         case 2:
           _ref = [args, scope, {}], fn = _ref[0], args = _ref[1], scope = _ref[2];
@@ -41,7 +41,9 @@
           _ref2 = [scope, [], {}], fn = _ref2[0], args = _ref2[1], scope = _ref2[2];
       }
       scope.loop = _(_.recurse).bind(null, _(fn).bind(scope));
-      return scope.loop.apply(scope, args);
+      ret = scope.loop.apply(scope, args);
+      delete scope.loop;
+      return ret;
     },
     recurse: (function() {
       var r;
