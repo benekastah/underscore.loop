@@ -4,18 +4,18 @@
 
 There are two functions to know:
 
-    1. `loop( [ [ scope ], args ], fn )`
-        
-        This function initiates a recursive loop. To enter the next iteration of the loop, use
-        `return this.loop( ...args )`. Note that `this.loop` is a curried form of `recurse` described
-        below, which means `this.loop` will occupy constant space in the stack. The arguments passed 
-        in to `this.loop` are passed in as arguments to the looping function.
+1. `loop( [ [ scope ], args ], fn )`
     
-    2. `recurse( fn, [ ...args ] )`
-        
-        This function performs tail-call optimization on a recursive process. Note that this function
-        call must be `return`ed (in tail position) from your process for it to work. When the process
-        is finished, simply return any value (except a call to recurse).
+    This function initiates a recursive loop. To enter the next iteration of the loop, use
+    `return this.loop( ...args )`. Note that `this.loop` is a curried form of `recurse` described
+    below, which means `this.loop` will occupy constant space in the stack. The arguments passed 
+    in to `this.loop` are passed in as arguments to the looping function.
+
+2. `recurse( fn, [ ...args ] )`
+    
+    This function performs tail-call optimization on a recursive process. Note that this function
+    call must be `return`ed (in tail position) from your process for it to work. When the process
+    is finished, simply return any value (except a call to recurse).
         
 ## Example
 
