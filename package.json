@@ -1,6 +1,6 @@
 {
   "name": "underscore.loop",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Scheme/Clojure style recursive looping and tail-call optimization with Underscore.js",
   "homepage": "https://github.com/benekastah/underscore.loop",
   "author": "Paul Harper <benekastah@gmail.com>"

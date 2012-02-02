@@ -1,11 +1,13 @@
 ###
 Copyright (c) 2011 Paul Harper
-underscore.loop version 0.0.1
+underscore.loop version 0.0.2
 
 MIT Licensed. Use as you will.
 ###
 
-try _ = require 'underscore'
+global = if global? then global else window
+
+try global._ ?= require 'underscore'
 
 class RecursiveCall
   constructor: (@fn, @args) ->

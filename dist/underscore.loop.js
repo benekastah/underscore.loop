@@ -1,25 +1,36 @@
+
+/*
+Copyright (c) 2011 Paul Harper
+underscore.loop version 0.0.1
+
+MIT Licensed. Use as you will.
+*/
+
 (function() {
-  /*
-  Copyright (c) 2011 Paul Harper
-  underscore.loop version 0.0.1
-  
-  MIT Licensed. Use as you will.
-  */
-  var RecursiveCall, flatStackLoop, _;
-  var __slice = Array.prototype.slice;
+  var RecursiveCall, flatStackLoop, global,
+    __slice = Array.prototype.slice;
+
+  global = global != null ? global : window;
+
   try {
-    _ = require('underscore');
-  } catch (_e) {}
+    if (global._ == null) global._ = require('underscore');
+  } catch (_error) {}
+
   RecursiveCall = (function() {
+
     function RecursiveCall(fn, args) {
       this.fn = fn;
       this.args = args;
     }
+
     RecursiveCall.prototype.call = function() {
       return this.fn.apply(null, this.args);
     };
+
     return RecursiveCall;
+
   })();
+
   flatStackLoop = function(rcall) {
     var fn;
     fn = rcall.fn;
@@ -30,6 +41,7 @@
     fn.recursing = false;
     return rcall;
   };
+
   _.mixin({
     loop: function(scope, args, fn) {
       var ret, _ref, _ref2;
@@ -64,4 +76,5 @@
       return r;
     })()
   });
+
 }).call(this);
